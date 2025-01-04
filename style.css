@@ -16,6 +16,10 @@ body {
 /* Navbar Start */
 #navbar {
   background: #f9f9f9;
+  position: sticky; /* Menjadikan navbar sticky */
+  top: 0; /* Menempel di atas halaman */
+  z-index: 1000; /* Menjaga navbar tetap di atas konten lainnya */
+  background-color: rgba(255, 255, 255, 0.8); 
 }
 #logo {
   font-size: 36px;
@@ -69,11 +73,11 @@ body {
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #333333;
+  color: #3586d7;
 }
 .hero-description {
   font-size: 20px;
-  color: #555555;
+  color:rgb(112, 112, 112);
   margin-top: 1rem;
 }
 .hero-buttons {
@@ -155,7 +159,7 @@ body {
 }
 .list-icon {
   margin-right: 10px;
-  color: #007bff;
+  color: #3586d7;
 }
 .struktur-image {
   text-align: center;
@@ -168,38 +172,44 @@ body {
 /*End Visi Misi dan Struktur Organisasi */
 
 /* Start Jadwal Kebaktian */
-.schedule-container {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
-  max-width: 800px;
+/* Jadwal Section */
+.jadwal {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.schedule-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 1.5rem;
+
+.jadwal-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  min-width: 280px;
 }
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
+
+.jadwal-item h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
-.schedule-table th,
-.schedule-table td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+
+.jadwal-item p {
+  font-size: 1em;
+  margin: 5px 0;
 }
-.schedule-table th {
-  background-color: #f1f1f1;
-  color: #333;
-  font-weight: bold;
-}
-.schedule-table tr:hover {
-  background-color: #f9f9f9;
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .jadwal {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .jadwal-item {
+      width: 90%;
+  }
+} background-color: #f9f9f9;
 }
 /* End Jadwal Kebaktian */
 
@@ -215,7 +225,7 @@ body {
 }
 .profil-icon {
   font-size: 3rem;
-  color: #007bff;
+  color: #3586d7;
 }
 .profil-img-container {
   text-align: center;
@@ -240,7 +250,7 @@ body {
 }
 .icon {
   font-size: 3rem;
-  color: #6c63ff;
+  color: #3586d7;
 }
 .day {
   font-size: 1.2rem;
@@ -250,6 +260,41 @@ body {
   color: #6c757d;
 }
 /* Jadwal Kebaktian End */
+
+/* Start daftar pendeta */
+.pendeta-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pendeta-card img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+.pendeta-card-body {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+}
+.pendeta-card-body h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+.pendeta-card-body p {
+  font-size: 1rem;
+  color: #333;
+}
+.pendeta-card-body .btn {
+  background-color: #0056b3;
+  color: #fff;
+}
+.pendeta-card-body .btn:hover {
+  background-color: #00409a;
+}
+
+/* End daftar pendeta */
 
 /* Section Book Start */
 .book {
